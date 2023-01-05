@@ -54,7 +54,7 @@ int[,] IntMatrix(int m, int n)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(-9, 10);
+            matrix[i, j] = new Random().Next(0, 10);
             Console.Write($"{matrix[i, j]} ");
         }
         Console.WriteLine();
@@ -75,4 +75,29 @@ void Position(int[,] matr)
     else Console.WriteLine(matr[str-1, col-1]);
 }
 
-Position(IntMatrix(3,4));
+//Position(IntMatrix(3,4));
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+void Average(int[,] table)
+{
+    for(int k = 0; k < table.GetLength(1); k++)
+    {
+        double avgCol = 0;
+
+        for (int l = 0; l < table.GetLength(0); l++)
+        {
+            avgCol += table[l, k];
+        }
+
+        Console.Write($"{Math.Round(avgCol / table.GetLength(0), 1)}; ");
+    }
+}
+
+Average(IntMatrix(3, 4));
