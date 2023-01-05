@@ -29,9 +29,10 @@ void Matrix()
         Console.WriteLine();
     }
 
+    Console.WriteLine();
 }
 
-//Matrix();
+Matrix();
 
 // Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 //и возвращает значение этого элемента или же указание, что такого элемента нет.
@@ -73,9 +74,10 @@ void Position(int[,] matr)
     if (str-1 < 0 || col-1 < 0) Console.WriteLine("Неверные координаты");
     else if (str > matr.GetLength(0) || col > matr.GetLength(1)) Console.WriteLine("Элемента с такими координатами в массиве нет");
     else Console.WriteLine(matr[str-1, col-1]);
+    Console.WriteLine();
 }
 
-//Position(IntMatrix(3,4));
+Position(IntMatrix(3,4));
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
